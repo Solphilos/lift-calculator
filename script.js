@@ -1,48 +1,50 @@
+let results = document.querySelector('.results');
 
 
- let results = document.querySelector('.results');
 
 
+
+ // creates new divs for each weeks routine calculations
 const makeResultTable = () => {
-    let weekOne = document.createElement('div');
-    let weekTwo = document.createElement('div');
-    let weekThree = document.createElement('div');
-    let weekFour = document.createElement('div');
-    results.appendChild(weekOne);
-    results.appendChild(weekTwo);
-    results.appendChild(weekThree);
-    results.appendChild(weekFour);
+   let weekOne = document.createElement('div');
+   let weekTwo = document.createElement('div');
+   let weekThree = document.createElement('div');
+   let weekFour = document.createElement('div');
+   results.appendChild(weekOne);
+   results.appendChild(weekTwo);
+   results.appendChild(weekThree);
+   results.appendChild(weekFour);
 } 
 
 
 
 const calcWeekOne = (max) => {
-    let setOne = .65 * max;
-    let setTwo = .75 * max;
-    let setThree = .85 * max;
-    
+   let setOne = .65 * max;
+   let setTwo = .75 * max;
+   let setThree = .85 * max;
+   console.log(setOne + " x 5", setTwo + " x 5", setThree + " x 5+")
  }
  
 
  const calcWeekTwo = (max) => {
-    let setOne = .70 * max;
-    let setTwo = .80 * max;
-    let setThree = .90 * max;
-   console.log(setOne + " x 5", setTwo + " x 5", setThree + " x 5")
+   let setOne = .70 * max;
+   let setTwo = .80 * max;
+   let setThree = .90 * max;
+   console.log(setOne + " x 3", setTwo + " x 3", setThree + " x 3+")
  }
 
  const calcWeekThree = (max) => {
-    let setOne = .75 * max;
-    let setTwo = .85 * max;
-    let setThree = .95 * max;
-   console.log(setOne, setTwo, setThree)
+   let setOne = .75 * max;
+   let setTwo = .85 * max;
+   let setThree = .95 * max;
+   console.log(setOne + " x 5", setTwo + " x 3", setThree + " x 1+")
  }
  
  const calcWeekFour = (max) => {
-    let setOne = .40 * max;
-    let setTwo = .50 * max;
-    let setThree = .60 * max;
-   console.log(setOne, setTwo, setThree)
+   let setOne = .40 * max;
+   let setTwo = .50 * max;
+   let setThree = .60 * max;
+   console.log(setOne + " x 5", setTwo + " x 5", setThree + " x 5")
  }
  
 
@@ -62,5 +64,6 @@ const calcWeekOne = (max) => {
     makeRoutine(input);
     
  }
+
 
 
