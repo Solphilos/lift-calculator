@@ -1,3 +1,7 @@
+let setOne;
+let setTwo;
+let setThree;
+let weekOneSets;
 let results = document.querySelector('.results');
 
 
@@ -16,35 +20,56 @@ const makeResultTable = () => {
    results.appendChild(weekFour);
 } 
 
+// creates new div and populates results from calculations
+const popResults = (week, x, y, z) => {
+   let newResults = document.createElement('div');
+   let firstSet = document.createElement('p');
+   let secondSet = document.createElement('p');
+   let thirdSet = document.createElement('p');
+   let weekNum = document.createElement('h1');
+   results.appendChild(newResults);
+   newResults.appendChild(weekNum);
+   newResults.appendChild(firstSet);
+   newResults.appendChild(secondSet);
+   newResults.appendChild(thirdSet);
+   weekNum.textContent = 'Week' + week
+   firstSet.textContent = x;
+   secondSet.textContent = y;
+   thirdSet.textContent = z;
+   newResults.style.border = "solid grey 1px";
+   newResults.classList.add('newResults');
+  
+}
+
 
 
 const calcWeekOne = (max) => {
-   let setOne = .65 * max;
-   let setTwo = .75 * max;
-   let setThree = .85 * max;
-   console.log(setOne + " x 5", setTwo + " x 5", setThree + " x 5+")
+   let setOne = .65 * max + " x 5";
+   let setTwo = .75 * max + " x 5";
+   let setThree = .85 * max + " x 5+";
+   popResults('1', setOne, setTwo, setThree);
  }
  
 
  const calcWeekTwo = (max) => {
-   let setOne = .70 * max;
-   let setTwo = .80 * max;
-   let setThree = .90 * max;
-   console.log(setOne + " x 3", setTwo + " x 3", setThree + " x 3+")
+   let setOne = .70 * max + " x 3";
+   let setTwo = .80 * max + " x 3";
+   let setThree = .90 * max + " x 3+";
+   popResults('2', setOne, setTwo, setThree);
  }
 
  const calcWeekThree = (max) => {
-   let setOne = .75 * max;
-   let setTwo = .85 * max;
-   let setThree = .95 * max;
-   console.log(setOne + " x 5", setTwo + " x 3", setThree + " x 1+")
+   let setOne = .75 * max + " x 5";
+   let setTwo = .85 * max + " x 3";
+   let setThree = .95 * max + " x 1+";
+   popResults('3', setOne, setTwo, setThree);
  }
  
  const calcWeekFour = (max) => {
-   let setOne = .40 * max;
-   let setTwo = .50 * max;
-   let setThree = .60 * max;
-   console.log(setOne + " x 5", setTwo + " x 5", setThree + " x 5")
+   let setOne = .40 * max + " x 5";
+   let setTwo = .50 * max + " x 5";
+   let setThree = .60 * max + " x 5";
+   popResults('4', setOne, setTwo, setThree);
  }
  
 
