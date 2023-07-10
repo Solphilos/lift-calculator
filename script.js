@@ -44,31 +44,43 @@ const popResults = (week, x, y, z) => {
 
 
 const calcWeekOne = (max) => {
-   let setOne = .65 * max + " x 5";
-   let setTwo = .75 * max + " x 5";
-   let setThree = .85 * max + " x 5+";
+   let one = .65 * max;
+   let two = .75 * max;
+   let three = .85 * max;
+   let setOne = Math.round(one) + " x 5";
+   let setTwo = Math.round(two) + " x 5";
+   let setThree = Math.round(three) + " x 5+";
    popResults('1', setOne, setTwo, setThree);
  }
  
 
  const calcWeekTwo = (max) => {
-   let setOne = .70 * max + " x 3";
-   let setTwo = .80 * max + " x 3";
-   let setThree = .90 * max + " x 3+";
+   let one = .70 * max;
+   let two = .80 * max;
+   let three = .90 * max;
+   let setOne = Math.round(one) + " x 3";
+   let setTwo = Math.round(two) + " x 3";
+   let setThree = Math.round(three) + " x 3+";
    popResults('2', setOne, setTwo, setThree);
  }
 
  const calcWeekThree = (max) => {
-   let setOne = .75 * max + " x 5";
-   let setTwo = .85 * max + " x 3";
-   let setThree = .95 * max + " x 1+";
+   let one = .75 * max;
+   let two = .85 * max;
+   let three = .95 * max;
+   let setOne = Math.round(one) + " x 5";
+   let setTwo = Math.round(two) + " x 3";
+   let setThree = Math.round(three) + " x 1+";
    popResults('3', setOne, setTwo, setThree);
  }
  
  const calcWeekFour = (max) => {
-   let setOne = .40 * max + " x 5";
-   let setTwo = .50 * max + " x 5";
-   let setThree = .60 * max + " x 5";
+   let one = .40 * max;
+   let two = .50 * max;
+   let three = .60 * max;
+   let setOne = Math.round(one) + " x 5";
+   let setTwo = Math.round(two) + " x 5";
+   let setThree = Math.round(three) + " x 5";
    popResults('4', setOne, setTwo, setThree);
  }
  
