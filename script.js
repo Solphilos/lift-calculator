@@ -5,21 +5,6 @@ let weekOneSets;
 let results = document.querySelector('.results');
 
 
-
-
-
- // creates new divs for each weeks routine calculations
-const makeResultTable = () => {
-   let weekOne = document.createElement('div');
-   let weekTwo = document.createElement('div');
-   let weekThree = document.createElement('div');
-   let weekFour = document.createElement('div');
-   results.appendChild(weekOne);
-   results.appendChild(weekTwo);
-   results.appendChild(weekThree);
-   results.appendChild(weekFour);
-} 
-
 // creates new div and populates results from calculations
 const popResults = (week, x, y, z) => {
    let newResults = document.createElement('div');
@@ -38,11 +23,13 @@ const popResults = (week, x, y, z) => {
    thirdSet.textContent = z;
    newResults.style.border = "solid grey 1px";
    newResults.classList.add('newResults');
+   newResults.setAttribute('id', 'newResults');
+
   
 }
 
 
-
+// returns a given percentage of of training max
 const calcWeekOne = (max) => {
    let one = .65 * max;
    let two = .75 * max;
@@ -95,11 +82,25 @@ const calcWeekOne = (max) => {
 
  
 
-// gets the value of text input field and populates new div with values
+// gets the value of text input field and populates new div with values. Disables submit button on click. 
  const submitData = () => {
-    let input = document.getElementById('maxInput').value;
-    makeRoutine(input);
-    
+   let input = document.getElementById('maxInput').value;
+   makeRoutine(input);
+   if (input > 0) {
+     let button = document.querySelector('.submit');
+     button.setAttribute('disabled', true);
+   } 
+ }
+
+
+ // clears number input field and removes divs
+ const clearFields = () => {
+   results.innerHTML = '';
+   let input = document.getElementById('maxInput'); 
+   input.value = '';
+   let button = document.querySelector('.submit');
+   button.removeAttribute('disabled');  
+   
  }
 
 
