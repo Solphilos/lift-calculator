@@ -48,7 +48,6 @@ body {
     width: 80%;
     display: flex;
     justify-content: space-around;
-    
 }
 
 .newResults {
@@ -58,5 +57,72 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* everything above here will be mobile, everything below for larger screens */
+ 
+@media (min-width: 600px){              /* start work on mobile first styling */
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+
+   .main-container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: 1fr 8fr;
+    }
+
+    .header {
+      grid-row: 1;
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid grey;
+    }
+
+    .sidebar {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      border: solid pink;
+    }
+
+    .body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      grid-column: 2;
+      grid-row: 2;
+      border: solid red;
+    }
+
+    .inputMaxes {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: solid violet;
+    }
+
+    .results {
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
     
+    }
+
+    .newResults {
+      height: 300px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+    }
 }
