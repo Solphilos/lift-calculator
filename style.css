@@ -1,62 +1,69 @@
+:root {
+  --main-bg-color: rgb(34, 33, 33);
+  --title-font: #CCD4DD;
+}
+
 body {
-    height: 100%;
-    margin: 0;
+  background-color: var(--main-bg-color);
+  height: 100%;
+  margin: 0;
 }
 
 .main-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 8fr;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-    grid-row: 1;
-    grid-column: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid grey;
-}
-
-.sidebar {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    border: solid pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-font);
 }
 
 .body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    grid-column: 2;
-    grid-row: 2;
-    border: solid red;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .inputMaxes {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: solid violet;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: var(--title-font);
 }
 
 .results {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .newResults {
-    height: 300px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 300px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-font);
+}
+
+.buttonBox {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  
 }
 
 /* everything above here will be mobile, everything below for larger screens */
@@ -70,32 +77,23 @@ body {
 
    .main-container {
       height: 100%;
-      display: grid;
-      grid-template-columns: 1fr 5fr;
-      grid-template-rows: 1fr 8fr;
+      display: flex;
+      
     }
 
     .header {
-      grid-row: 1;
-      grid-column: 2;
       display: flex;
       justify-content: center;
       align-items: center;
       border: solid grey;
     }
 
-    .sidebar {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      border: solid pink;
-    }
+    
 
     .body {
       display: flex;
       align-items: center;
       flex-direction: column;
-      grid-column: 2;
-      grid-row: 2;
       border: solid red;
     }
 

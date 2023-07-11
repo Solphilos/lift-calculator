@@ -11,13 +11,15 @@ const popResults = (week, x, y, z) => {
    let firstSet = document.createElement('p');
    let secondSet = document.createElement('p');
    let thirdSet = document.createElement('p');
-   let weekNum = document.createElement('h1');
+   let weekNum = document.createElement('p');
    results.appendChild(newResults);
    newResults.appendChild(weekNum);
    newResults.appendChild(firstSet);
    newResults.appendChild(secondSet);
    newResults.appendChild(thirdSet);
    weekNum.textContent = 'Week' + week
+   weekNum.style.fontWeight = "bold";
+   weekNum.style.fontSize = "1rem"
    firstSet.textContent = x;
    secondSet.textContent = y;
    thirdSet.textContent = z;

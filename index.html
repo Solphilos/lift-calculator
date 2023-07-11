@@ -13,21 +13,16 @@
             <h1>lift-calculator</h1>
         </div>
 
-        <div class="sidebar">
-            <ul>
-                <li>Bench Press</li>
-                <li>Trap bar deadlift</li>
-                <li>Press</li>
-            </ul>
-        </div>
-
         <div class="body">
             <div class="inputMaxes">
-                
-                <label for="maxes" class="trainingMax">Input training max</label>
-                <input type="number" id="maxInput">
-                <button type="submit" class="submit" onclick="submitData()">Submit</button>
-                <button class="clear" onclick="clearFields()">Clear</button>                 
+                <fieldset>
+                  <label for="maxes" class="trainingMax">Input training max</label>
+                  <input type="number" id="maxInput">
+                </fieldset>
+                <div class="buttonBox">
+                  <button type="submit" class="submit" onclick="submitData()">Submit</button>
+                  <button class="clear" onclick="clearFields()">Clear</button> 
+                </div>                
             </div>
             
             
