@@ -19,7 +19,7 @@ const popResults = (week, x, y, z) => {
    newResults.appendChild(thirdSet);
    weekNum.textContent = 'Week' + week
    weekNum.style.fontWeight = "bold";
-   weekNum.style.fontSize = "1rem"
+   weekNum.style.fontSize = "1rem";
    firstSet.textContent = x;
    secondSet.textContent = y;
    thirdSet.textContent = z;
@@ -87,8 +87,8 @@ const calcWeekOne = (max) => {
 // gets the value of text input field and populates new div with values. Disables submit button on click. 
  const submitData = () => {
    let input = document.getElementById('maxInput').value;
-   makeRoutine(input);
-   if (input > 0) {
+   if (input > 1) {
+     makeRoutine(input);
      let button = document.querySelector('.submit');
      button.setAttribute('disabled', true);
    } 
