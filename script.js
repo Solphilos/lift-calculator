@@ -17,13 +17,14 @@ const popResults = (week, x, y, z) => {
    newResults.appendChild(firstSet);
    newResults.appendChild(secondSet);
    newResults.appendChild(thirdSet);
-   weekNum.textContent = 'Week' + week
+   weekNum.textContent = 'Week ' + week
    weekNum.style.fontWeight = "bold";
-   weekNum.style.fontSize = "1rem";
+   weekNum.style.fontSize = "2rem";
    firstSet.textContent = x;
    secondSet.textContent = y;
    thirdSet.textContent = z;
    newResults.style.border = "solid grey 1px";
+   newResults.style.borderRadius = "5px";
    newResults.classList.add('newResults');
    newResults.setAttribute('id', 'newResults');
 
