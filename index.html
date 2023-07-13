@@ -15,14 +15,23 @@
 
         <div class="body">
             <div class="inputMaxes">
-                <div class="numInput">
-                  <label for="maxes" class="trainingMax">Input training max</label>
-                  <input type="number" id="maxInput" required>
+                <div class="inputContainer">
+                    <div class="trainingInput">
+                       <label for="maxes" class="trainingMax"> Training max</label>
+                       <input type="number" id="maxInput" required>
+                    </div>  
+                    <div class="filler"></div>
+                    <div class="actualInput">
+                        <label for="maxes" class="trainingMax">Actual max</label>
+                        <input type="number" id="actualMax" required>
+                    </div>                    
                 </div>
-                <div class="buttonBox">
-                  <button type="submit" class="submit" onclick="submitData()">Submit</button>
-                  <button class="clear" onclick="clearFields()">Clear</button> 
-                </div>                
+
+                  <div class="buttonBox">
+                    <button type="submit" class="submit" onclick="submitData()">Submit</button>
+                    <button class="clear" onclick="clearFields()">Clear</button> 
+                  </div> 
+                               
             </div>
             
             

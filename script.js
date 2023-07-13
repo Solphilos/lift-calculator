@@ -3,6 +3,9 @@ let setTwo;
 let setThree;
 let weekOneSets;
 let results = document.querySelector('.results');
+let input = document.getElementById('maxInput'); 
+let actualMax = document.getElementById('actualMax');
+let button = document.querySelector('.submit');
 
 
 // creates new div and populates results from calculations
@@ -27,6 +30,7 @@ const popResults = (week, x, y, z) => {
    newResults.style.borderRadius = "5px";
    newResults.classList.add('newResults');
    newResults.setAttribute('id', 'newResults');
+   newResults.style.backgroundColor = "#4B4B4B";
 
   
 }
@@ -85,26 +89,28 @@ const calcWeekOne = (max) => {
 
  
 
-// gets the value of text input field and populates new div with values. Disables submit button on click. 
+// gets the value of text input fields and populates new div with values. Disables submit button on click. 
  const submitData = () => {
-   let input = document.getElementById('maxInput').value;
-   if (input > 1) {
-     makeRoutine(input);
-     let button = document.querySelector('.submit');
-     button.setAttribute('disabled', true);
-   } 
+  if (input.value > 1) {
+    makeRoutine(input.value);
+    button.setAttribute('disabled', true);
+  } 
+  // takes the input numbers and returns the value of 90% of that number
+  if (actualMax.value > 1) {
+    let adjustedMax = actualMax.value * .90;
+    makeRoutine(adjustedMax);
+    button.setAttribute('disabled', true);
+  } 
  }
 
 
  // clears number input field and removes divs
  const clearFields = () => {
-   results.innerHTML = '';
-   let input = document.getElementById('maxInput'); 
-   input.value = '';
-   let button = document.querySelector('.submit');
-   button.removeAttribute('disabled');  
-   
- }
+    results.innerHTML = '';
+    input.value = '';
+    actualMax.value = '';
+    button.removeAttribute('disabled');  
+  }
 
 
 
