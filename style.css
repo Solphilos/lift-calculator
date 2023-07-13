@@ -21,6 +21,13 @@ body {
   flex-direction: column;
 }
 
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .header {
   height: 50px;
   background-image: linear-gradient(#4b4b4b, var(--main-bg-color));
@@ -87,6 +94,10 @@ body {
   color: rgb(228, 228, 228);
 }
 
+.filler {
+  height: 10px;
+}
+
 /* everything above here will be mobile, everything below for larger screens */
  
 @media (min-width: 600px){              /* start work on mobile first styling */
@@ -138,12 +149,14 @@ body {
       height: 25px;
       width: 180px;
       font-size: 20px;
+      border-radius: 8px;
     }
     
     #actualMax {
       height: 25px;
       width: 180px;
       font-size: 20px;
+      border-radius: 8px;
     }
    
 
@@ -184,7 +197,6 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      
     }
     
     .filler {
